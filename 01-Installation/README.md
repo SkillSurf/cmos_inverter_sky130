@@ -2,12 +2,10 @@
 
 # Table of Contents
 
-1. [Upcoming Skill Surf Course for 2025 Q2](#upcoming-skill-surf-course-for-2025-q2)
-2. [Installation on Windows](#installation-on-windows)
+1. [Installation on Windows](#installation-on-windows)
    - [Installation of ngspice, Magic VLSI, and Xschem](#installation-of-ngspice-magic-vlsi-and-xschem)
    - [Downloading SKY130 PDK](#downloading-sky130-pdk)
-
-4. [Installation on macOS](#installation-on-macos)
+2. [Installation on macOS](#installation-on-macos)
    - [macports Installation](#macports-installation)
    - [Homebrew Installation](#homebrew-installation)
    - [xschem Installation Steps](#xschem-installation-steps)
@@ -16,8 +14,7 @@
    - [magic Installation Steps (macports)](#magic-installation-steps-macports)
    - [klayout Installation Steps (Homebrew)](#klayout-installation-steps-homebrew)
    - [OpenLane Installation on macOS](#openlane-installation-on-macos)
-
-## Upcoming skill surf course for 2025 Q2.
+2. [Installation using Docker](#installation-using-docker)
 
 ### Analog IC design
 Analog IC design begins with creating a schematic in a schematic editor, which visually represents the circuit design. From this schematic, a netlist is generated, detailing all components and their connections. This netlist is then used in a SPICE-level simulator to analyze the circuit's behavior under various conditions. The simulated output is reviewed to ensure the design meets required specifications. Once the design is validated, the IC layout is manually drawn using a graphical layout editor, representing the physical placement and routing of components. Finally, the layout is thoroughly checked for correctness to ensure it matches the schematic and complies with all design rules and specifications. chekout more [Analog IC Design](https://sscs-ose.github.io/analog/)
