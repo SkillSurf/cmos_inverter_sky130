@@ -1,7 +1,21 @@
 # Open Source Analog/Digital ASIC Design
 
-table of content:
+# Table of Contents
 
+1. [Upcoming Skill Surf Course for 2025 Q2](#upcoming-skill-surf-course-for-2025-q2)
+2. [Installation on Windows](#installation-on-windows)
+   - [Installation of ngspice, Magic VLSI, and Xschem](#installation-of-ngspice-magic-vlsi-and-xschem)
+   - [Downloading SKY130 PDK](#downloading-sky130-pdk)
+
+4. [Installation on macOS](#installation-on-macos)
+   - [macports Installation](#macports-installation)
+   - [Homebrew Installation](#homebrew-installation)
+   - [xschem Installation Steps](#xschem-installation-steps)
+   - [ngspice Installation Steps (Homebrew)](#ngspice-installation-steps-homebrew)
+   - [ngspice Installation Steps (macports)](#ngspice-installation-steps-macports)
+   - [magic Installation Steps (macports)](#magic-installation-steps-macports)
+   - [klayout Installation Steps (Homebrew)](#klayout-installation-steps-homebrew)
+   - [OpenLane Installation on macOS](#openlane-installation-on-macos)
 
 ## Upcoming skill surf course for 2025 Q2.
 
@@ -42,7 +56,7 @@ Some of these tools require a Linux/Ubuntu environment to run. If dual-booting t
 ### Installation of ngspice, Magic VLSI, and Xschem
 
 #### Step 01 - Install a Shell Script
-To begin, install a source code editor by running the following command in the terminal. Here **nedit** has been used:
+To begin, install a source code editor by running the following command in the terminal. Here ```nedit``` has been used:
 ```sh
 sudo apt-get install nedit
 ```
@@ -51,7 +65,7 @@ sudo apt-get install nedit
 ```sh 
 nedit name.sh
 ```
-Replace name.sh with your desired filename. Click on **New file**, then copy all the text from installENV.txt, paste it into the script editor, and save it using Ctrl+S.
+Replace ```name.sh``` with your desired filename. Click on ```New file```, then copy all the text from ```installENV.txt```, paste it into the script editor, and save it using Ctrl+S.
 
 #### Step 03 - Run The script.
 Finally, execute the script using:
