@@ -74,7 +74,7 @@ After following the steps ngSPICE, xschem, and Magic VLSI will be installed in y
 
 ### Downloading sky130 PDK
 
-## Installations on macOS
+## Installations on macOS (Kithmin can complete this)
 
 ### macports
 - [Steps](https://guide.macports.org/chunked/installing.html#installing.xcode)
@@ -93,10 +93,6 @@ After following the steps ngSPICE, xschem, and Magic VLSI will be installed in y
 ### klayout
 [Steps](https://formulae.brew.sh/formula/ngspice)
 
-### OpenLane
-[Steps](https://openlane.readthedocs.io/en/latest/getting_started/installation/installation_macos.html#)
+## Installations with Docker (Kithmin can complete this)
 
-## Projects
-
-[Bandgap](https://skywater-pdk.readthedocs.io/en/main/contents/libraries/sky130_fd_io/docs/user_guide.html)
-[2x2_MVM]()
+[Steps](https://kwantaekim.github.io/2024/05/25/OSE-Docker/)
