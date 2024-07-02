@@ -93,6 +93,6 @@ After following the steps ngSPICE, xschem, and Magic VLSI will be installed in y
 ### klayout
 [Steps](https://formulae.brew.sh/formula/ngspice)
 
-## Installations with Docker (Kithmin can complete this)
+## Installations with Docker
 
 [Steps](https://kwantaekim.github.io/2024/05/25/OSE-Docker/)
