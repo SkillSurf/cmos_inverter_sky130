@@ -65,7 +65,7 @@ sudo apt-get install nedit
 ```sh 
 nedit name.sh
 ```
-Replace ```name.sh``` with your desired filename. Click on ```New file```, then copy all the text from ```installENV.txt```, paste it into the script editor, and save it using Ctrl+S.
+Replace ```name.sh``` with your desired filename. Click on ```New file```, then copy all the text from [```installENV.txt```](installENV.txt), paste it into the script editor, and save it using Ctrl+S.
 
 #### Step 03 - Run The script.
 Finally, execute the script using:
