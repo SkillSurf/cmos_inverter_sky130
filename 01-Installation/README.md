@@ -124,7 +124,7 @@ Run the following command in the terminal:
 ```
 
 #### Install PDK in the right directory.
-The following commands will copy the built program, its libraries, and documentation to the correct locations. Run them one at a time and wait until each command is completely finished. If errors occur, please refer to [```Errors_and_Solutions```]().
+The following commands will copy the built program, its libraries, and documentation to the correct locations. Run them one at a time and wait until each command is completely finished. If errors occur, please refer to ```Errors_and_Solutions```.
 ```sh
    sudo make
    sudo make install
@@ -139,7 +139,9 @@ Check for the installed PDKs by running the following command:
    ls /usr/local/share/pdk
 ```
 The following files should be shown:
-<img title="Installed sky130 packages" width = 700 alt="new shell script in nedit" src="media/sky130s.png">
+
+<img title="Installed sky130 packages" width = 700 alt="installed files" src="media/files.png">
+
 Make sure the files are there. The PDK is successfully installed.
 
 The PDK is succesfully installed. 
