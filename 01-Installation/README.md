@@ -89,8 +89,6 @@ Checkout more on [Skywater](https://www.skywatertechnology.com/) and [Silicon](h
 After installing the software, you will be at the ```~/whyRD_eda_bundle/ngspice_git``` directory. If not, please navigate to the directory. Then follow the steps for downloading sky130 PDK.
 It may be prompted for your password or asked to confirm actions with [Y/N].
 
-Step 1
-
 #### Step 1
 Update the available packages:
 ```sh
