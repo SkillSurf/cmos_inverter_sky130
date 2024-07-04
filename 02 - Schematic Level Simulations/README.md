@@ -1,0 +1,1 @@
+# Simulating a CMOS inverter in Xschem under sky130
