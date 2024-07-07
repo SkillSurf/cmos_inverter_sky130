@@ -3,24 +3,18 @@
 The noise margin of a electronic design is a critical parameter that quantifies its robustness against electrical noise, ensuring reliable operation in digital systems. It defines how the design respond for unwanted signal components.
 
 Noise margine is defined in two types.
-- Lower Noise Margin ($NM_{L}$)
-$$
-    NM_L=V_{IL}-V_{OL}
-$$
-- Higher Noise Margin ($NM_{H}$)
-$$
-    NM_H=V_{OH}-V_{IH}
-$$
+- Lower Noise Margin ($NM_{L}$)\
+$$NM_L=V_{IL}-V_{OL}$$
+- Higher Noise Margin ($NM_{H}$)\
+$$NM_H=V_{OH}-V_{IH}$$
 Where
-$$
-    V_{IL} = Maximum Low Input Voltage \\
-    V_{OL} = Maximum Low Output Voltage\\
+    $$V_{IL} = Maximum Low Input Voltage$$ 
+    $$V_{OL} = Maximum Low Output Voltage$$\
+  
+    $$V_{IH} = Minimum High Input Voltage$$
+    $$V_{OH} = Minimum High Output Voltage$$ 
 
-    V_{IH} = Minimum High Input Voltage\\
-    V_{OH} = Minimum High Output Voltage \\
-$$
-
-<img title="Noise Margins" width = 700 alt="installed files" src="images\NoisMargins.jpg">
+<img title="Noise Margins" width = 500 alt="installed files" src="images\NoisMargins.jpg">
 
 ## Noise Margin in Digital Electronics
 
@@ -91,14 +85,11 @@ syntax : vil, vlh are parameter names. dc for DC analysis. cross=1, first point 
 
 
  ### Noise margin calculation of CMOS inverter undr sky130
- $$
-    NM_L=V_{IL}-V_{OL}\\
-    NM_L=743.5556mV-0mV\\
-    NM_L=743.5556mV
-$$
+ 
+$$NM_L=V_{IL}-V_{OL}$$ \
+$$NM_L=743.5556mV-0mV$$ \
+$$NM_L=743.5556mV$$
 
-$$
-    NM_H=V_{OH}-V_{IH}\\
-    NM_H=1.8V-0.9804444V\\
-    NM_H=819.5556mV
-$$
+$$NM_H=V_{OH}-V_{IH}$$ \
+$$NM_H=1.8V-0.9804444V$$ \
+$$NM_H=819.5556mV$$
