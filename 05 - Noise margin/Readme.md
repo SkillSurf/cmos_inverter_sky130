@@ -9,7 +9,7 @@ $$NM_L=V_{IL}-V_{OL}$$
 $$NM_H=V_{OH}-V_{IH}$$
 Where
     $$V_{IL} = Maximum Low Input Voltage$$ 
-    $$V_{OL} = Maximum Low Output Voltage$$\
+    $$V_{OL} = Maximum Low Output Voltage$$
   
     $$V_{IH} = Minimum High Input Voltage$$
     $$V_{OH} = Minimum High Output Voltage$$ 
