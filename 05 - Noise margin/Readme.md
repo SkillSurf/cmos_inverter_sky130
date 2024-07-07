@@ -90,11 +90,11 @@ syntax : vil, vlh are parameter names. dc for DC analysis. cross=1, first point 
 $$
 \begin{aligned}
     NM_L &= V_{IL} - V_{OL} \\
-    NM_L &= 743.5556\,\text{mV} - 0\,\text{mV} \\
+    NM_L &= 743.5556\,\text{mV} - 0\ \text{mV} \\
     NM_L &= 743.5556\,\text{mV} \\
     \\
     NM_H &= V_{OH} - V_{IH} \\
-    NM_H &= 1.8\,\text{V} - 0.9804444\,\text{V} \\
-    NM_H &= 819.5556\,\text{mV}
+    NM_H &= 1.8\,\text{V} - 0.9804444\ \text{V} \\
+    NM_H &= 819.5556\ \text{mV}
 \end{aligned}
 $$
