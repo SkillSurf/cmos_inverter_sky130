@@ -1,8 +1,8 @@
 # Voltage transfer characteristic Analysis
 
-The Voltage Transfer Characteristic (VTC) of a CMOS inverter is a critical graph that shows the relationship between the input voltage (vin) and the output voltage (vout). This curve is essential for understanding the behavior of the inverter.
+The Voltage Transfer Characteristic (VTC) of a CMOS inverter shows the relationship between the input voltage (vin) and the output voltage (vout). This curve is essential for understanding the behavior of the inverter.
 
-## Regions of operations in VTC (Three primary regions)##
+## Regions of operations in VTC (Three primary regions) ##
 **-low input voltage region:** 
     When vin is low (close to 0V), the PMOS transistor is in the saturation region, and the NMOS transistor is in the cutoff region. The PMOS transistor pulls the output voltage high.  
 **-transition region:** 
