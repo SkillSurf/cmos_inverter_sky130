@@ -1,4 +1,4 @@
-# Noise Margin analysis.
+# Noise Margin Analysis
 
 The noise margin of a electronic design is a critical parameter that quantifies its robustness against electrical noise, ensuring reliable operation in digital systems. It defines how the design respond for unwanted signal components.
 
