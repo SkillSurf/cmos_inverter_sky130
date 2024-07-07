@@ -72,4 +72,33 @@ here get the values of the absolute value of the derivative to a variable "gain"
 
 <img title="Plot $\left|\frac{dV_O}{dV_{in}}\right|$" width = 500 alt="derivative" src="images\gaingreater1.png">
 
- 
+
+Run the following command for better vissualization of the noise levells.
+```sh
+    let gain=(abs(deriv(vout)) >= 1)*1.8
+    plot gain vout
+```
+ <img title="Plot $\left|\frac{dV_O}{dV_{in}}\right|$" width = 500 alt="derivative" src="images\noiselevels.png">
+
+ Run the following spice commands one by one for determine $V_{IL}$ and $V_{IL}$.
+```sh
+    meas vil dc find vin when gain=1 cross=1
+    meas vlh dc find vin when gain=1 cross=2
+```
+syntax : vil, vlh are parameter names. dc for DC analysis. cross=1, first point of intersection, 2 for second.
+
+ <img title="$V_{IL}$ and $V_{IL}$ values" width = 500 alt="$V_{IL}$ and $V_{IL}$" src="images\vilvih.png">
+
+
+ ### Noise margin calculation of CMOS inverter undr sky130
+ $$
+    NM_L=V_{IL}-V_{OL}\\
+    NM_L=743.5556mV-0mV\\
+    NM_L=743.5556mV
+$$
+
+$$
+    NM_H=V_{OH}-V_{IH}\\
+    NM_H=1.8V-0.9804444V\\
+    NM_H=819.5556mV
+$$
