@@ -73,6 +73,7 @@ Run the following command for better vissualization of the noise levells.
     plot gain vout
 ```
  <img title="Plot $\left|\frac{dV_O}{dV_{in}}\right|$" width = 500 alt="derivative" src="images\noiselevels.png">
+ 
 
  Run the following spice commands one by one for determine $V_{IL}$ and $V_{IL}$.
 ```sh
@@ -86,10 +87,14 @@ syntax : vil, vlh are parameter names. dc for DC analysis. cross=1, first point 
 
  ### Noise margin calculation of CMOS inverter undr sky130
  
-$$NM_L=V_{IL}-V_{OL}$$ \
-$$NM_L=743.5556mV-0mV$$ \
-$$NM_L=743.5556mV$$
-
-$$NM_H=V_{OH}-V_{IH}$$ \
-$$NM_H=1.8V-0.9804444V$$ \
-$$NM_H=819.5556mV$$
+$$
+\begin{aligned}
+    NM_L &= V_{IL} - V_{OL} \\
+    NM_L &= 743.5556\,\text{mV} - 0\,\text{mV} \\
+    NM_L &= 743.5556\,\text{mV} \\
+    \\
+    NM_H &= V_{OH} - V_{IH} \\
+    NM_H &= 1.8\,\text{V} - 0.9804444\,\text{V} \\
+    NM_H &= 819.5556\,\text{mV}
+\end{aligned}
+$$
