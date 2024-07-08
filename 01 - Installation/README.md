@@ -144,25 +144,6 @@ Make sure the files are there. The PDK is successfully installed.
 
 The PDK is succesfully installed. 
 
-## Installations on macOS (Kithmin can complete this)
-
-### macports
-- [Steps](https://guide.macports.org/chunked/installing.html#installing.xcode)
-- [Steps](https://guide.macports.org/chunked/installing.macports.html)
-
-### homebrew
-[Steps](https://mac.install.guide/homebrew/3)
-
-### xschem
-[Steps](https://web02.gonzaga.edu/faculty/talarico/vlsi/CADToolsOnMac.html)
-### ngspice
-[Steps](https://formulae.brew.sh/formula/ngspice)
-[Steps](https://ports.macports.org/port/ngspice/)
-### magic
-[Steps](https://ports.macports.org/port/magic/)
-### klayout
-[Steps](https://formulae.brew.sh/formula/ngspice)
-
-## Installations with Docker
+## Installation on macOS with Docker
 
 [Steps](https://kwantaekim.github.io/2024/05/25/OSE-Docker/)
