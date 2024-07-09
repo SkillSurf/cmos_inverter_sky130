@@ -14,7 +14,7 @@
    - [magic Installation Steps (macports)](#magic-installation-steps-macports)
    - [klayout Installation Steps (Homebrew)](#klayout-installation-steps-homebrew)
    - [OpenLane Installation on macOS](#openlane-installation-on-macos)
-3. [Installation using Docker](#installation-using-docker)
+3. [Installation on macOS with Docker](#installation-on-macos-with-docker)
 
 ### Analog IC design
 Analog IC design begins with creating a schematic in a schematic editor, which visually represents the circuit design. From this schematic, a netlist is generated, detailing all components and their connections. This netlist is then used in a SPICE-level simulator to analyze the circuit's behavior under various conditions. The simulated output is reviewed to ensure the design meets required specifications. Once the design is validated, the IC layout is manually drawn using a graphical layout editor, representing the physical placement and routing of components. Finally, the layout is thoroughly checked for correctness to ensure it matches the schematic and complies with all design rules and specifications. chekout more [Analog IC Design](https://sscs-ose.github.io/analog/)
@@ -146,4 +146,6 @@ The PDK is succesfully installed.
 
 ## Installation on macOS with Docker
 
-[Steps](https://kwantaekim.github.io/2024/05/25/OSE-Docker/)
+#### NOTE: IIC-OSIC-TOOLS is an all-in-one Docker container for open-source-based integrated circuit designs for analog and digital circuit flows.
+
+Follow the [steps](https://kwantaekim.github.io/2024/05/25/OSE-Docker/) given in this tutorial to install the tools using Docker and run them in your web-browser. This approach consumes around 14 GB of your HD space, but is much more convenient since there is no requirement to install the tools manually. Refer to the [IIC-OSIC repository](https://github.com/iic-jku/IIC-OSIC-TOOLS) to find all the tools supported.
