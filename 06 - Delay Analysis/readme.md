@@ -35,7 +35,7 @@ For V<sub>in</sub> use following script
 ```sh
     "PULSE(0 1.8 0 .1n .3n 10n 20.6n 10)"
 ```  
-
+#### **Propagation Delay Calculation**
 After the simulation completed, run the following command on Ngspice to plot $V_{o}$ vs $V_{in}$.
 
 ```sh
@@ -57,15 +57,22 @@ Similarly run commands to get higher side of the propagation delay using followi
      let TpHL=vout50-vin50
      print TpLH
 ```
-To get average propagation delay run 
+To get average **propagation delay** run 
 ```sh
     print (TpLH+TpHL)/2
 ```
-<img title="Ngspice script for propagation delay" width = 500 alt="installed files" src="Images/Screenshot from 2024-07-13 10-25-29.png">
+<img title="Ngspice script for propagation delay" width = 500 alt="installed files" src="Images/Ngspice Script for propagation delay.png">
 
+#### **Risetime Falltime calculation
 
+To calculate Risetime (t<sub>r</sub>) use following commands on Ngspice 
+```sh
+     meas trans t10 when vout=0.18 RISE=1
+     meas trans t90 when vout=1.62  RISE=1
+    
 
-
+     
+### Propagation Delay depends on
 
 
 
