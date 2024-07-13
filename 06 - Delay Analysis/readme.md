@@ -36,11 +36,35 @@ For V<sub>in</sub> use following script
     "PULSE(0 1.8 0 .1n .3n 10n 20.6n 10)"
 ```  
 
-After the simulation completed, run the following command to plot $V_{o}$ vs $V_{in}$.
+After the simulation completed, run the following command on Ngspice to plot $V_{o}$ vs $V_{in}$.
 
 ```sh
     plot vin vout
 ```
+<img title="input and output voltage" width = 500 alt="installed files" src="Images/Screenshot from 2024-07-13 10-25-29.png">
+
+To get lower side Propagation Delay run following commands line by line on Ngspice window
+```sh
+     meas tran vin50 when vin=.9 RISE=2
+     meas tran vout50 when vout=.9 FALL=2
+     let TpHL=vout50-vin50
+     print TpHL
+```
+Similarly run commands to get higher side of the propagation delay using following commands 
+```sh
+     meas tran vin50 when vin=.9 FALL=1
+     meas tran vout50 when vout=.9 RISE=1
+     let TpHL=vout50-vin50
+     print TpLH
+```
+To get average propagation delay run 
+```sh
+    print (TpLH+TpHL)/2
+```
+<img title="Ngspice script for propagation delay" width = 500 alt="installed files" src="Images/Screenshot from 2024-07-13 10-25-29.png">
+
+
+
 
 
 
