@@ -84,7 +84,7 @@ Similarly to Calculate Falltime (t<sub>f</sub>) use following commands on Ngspic
 ## Parameters effect delay time
 
 #### Power 
-When increasing power delay will be low but there will be high power consumption. 
+When increasing power delay of the inverter will be low but there will be high power consumption. 
 #### Width of The Mosfet 
 When increasing width of mosfet loaded inverter delay will reduce but in unloaded inverter there won't be any effect because when increasing width it will also increase the internal capacitence.
 
