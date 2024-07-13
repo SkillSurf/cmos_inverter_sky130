@@ -98,11 +98,17 @@ After drawing the transistors connect them according to schematic using li and m
     paint NDC
     ```
  Then as above use paint ptap , paint ntap, paint natpc, paint ptapc,....... as required.  
+ 
  7. **Design Rule Check (DRC):**
     ```tcl
     drc check
     ```
     It's a good practice to check DRC when you do a change. You can view the DRC manger window by options menu then toggle the drc manager.IF all DRC are clear then extract the spice file from the layout.
+
+## Final Layout
+
+<img src="images/inv_layout.jpg" alt="N-Well and P-Diffusion" width="500" height="600"/>
+
    
 
 9. **Extract the Layout:**
