@@ -82,6 +82,7 @@ Similarly to Calculate Falltime (t<sub>f</sub>) use following commands on Ngspic
 <img title="Ngspice script for Risetime and Falltime" width = 500 alt="installed files" src="Images/Ngspice script fot Risetime Falltime calculation.png">
 
 ## Parameters effect delay time
+Rise and Fall time directly effect propergation delay. If we can reduce rise and fall time we can reduce the delay of the inverter.
 
 #### Power 
 When increasing power delay of the inverter will be low but there will be high power consumption. 
@@ -89,8 +90,19 @@ When increasing power delay of the inverter will be low but there will be high p
 When increasing width of mosfet loaded inverter delay will reduce but in unloaded inverter there won't be any effect because when increasing width it will also increase the internal capacitence.
 
 To simulate changes of the width,
-    First add a load capacitence to the inverter (Give a suitable value)
-    Then change the width of the mosfet by selecting the Mosfet.
+ - First add a load capacitence to the inverter (Give a suitable value)
+ - Then change the width of the mosfet by selecting the Mosfet.
+  <img title="Ngspice script for Risetime and Falltime" width = 500 alt="installed files" src="Images/Cap.png">
+  <img title="Ngspice script for Risetime and Falltime" width = 500 alt="installed files" src="Images/Width Change.png">
 
-As summery delay depend on power and width of mosfet. If we increase the width of the mosfet it will also increase the area of the circuit also if we increase the power their will be high power consumption.  
+
+Low width mosfet input output plot (Width of Pmos = 2, Width of Nmos =1)
+<img title="Ngspice script for Risetime and Falltime" width = 500 alt="installed files" src="Images/Low width mosfet.png">
+
+High width mosfet input output plot (Width of Pmos = 8, Width of Nmos =4)
+<img title="Ngspice script for Risetime and Falltime" width = 500 alt="installed files" src="Images/High width mosfet.png">
+
+There is a significant change in delay
+
+**As summery delay depend on power and width of mosfet. If we increase the width of the mosfet it will also increase the area of the circuit also if we increase the power their will be high power consumption.**
 
