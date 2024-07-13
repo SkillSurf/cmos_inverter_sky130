@@ -69,12 +69,28 @@ To calculate Risetime (t<sub>r</sub>) use following commands on Ngspice
 ```sh
      meas trans t10 when vout=0.18 RISE=1
      meas trans t90 when vout=1.62  RISE=1
-    
+     let tr=t90-t10
+     print tr
+```
+Similarly to Calculate Falltime (t<sub>f</sub>) use following commands on Ngspice
+```sh
+     meas trans t90 when vout=1.62 FALL=2
+     meas trans t10 when vout=0.18 FALL=2
+     let tf=t10-t90
+     print tf
+```
+<img title="Ngspice script for Risetime and Falltime" width = 500 alt="installed files" src="Images/Ngspice script fot Risetime Falltime calculation.png">
 
-     
-### Propagation Delay depends on
+## Parameters effect delay time
 
+#### Power 
+When increasing power delay will be low but there will be high power consumption. 
+#### Width of The Mosfet 
+When increasing width of mosfet loaded inverter delay will reduce but in unloaded inverter there won't be any effect because when increasing width it will also increase the internal capacitence.
 
+To simulate changes of the width,
+    First add a load capacitence to the inverter (Give a suitable value)
+    Then change the width of the mosfet by selecting the Mosfet.
 
-
+As summery delay depend on power and width of mosfet. If we increase the width of the mosfet it will also increase the area of the circuit also if we increase the power their will be high power consumption.  
 
