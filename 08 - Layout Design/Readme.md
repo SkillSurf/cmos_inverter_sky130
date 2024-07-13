@@ -1,4 +1,13 @@
 # CMOS Inverter Layout Design using Magic and SkyWater 130nm PDK
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Structure of the CMOS](#structure-of-the-cmos)
+4. [Layout Design](#layout-design)
+5. [Final Layout](#final-layout)
+
+
 ## Introduction
 Creating the physical layout of the CMOS inverter is essential for fabrication and further analysis process. In this section, we are going to do layout designing and DRC handling, spice generation of layout and LVS checking using NETGEN.
 
@@ -7,7 +16,7 @@ Creating the physical layout of the CMOS inverter is essential for fabrication a
 - SkyWater 130nm PDK
 - WSL (Windows Subsystem for Linux) if running on Windows or linux based system
 
-## Structure of the CMOS ##
+## Structure of the CMOS 
 Before moving into layout design we have to get some idea about the physical structure of a CMOS transistor in Silicon level. It includes key structures like diffusion areas, gate oxides, polysilicon gates, metal layers and vias etc.
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGPVb_MP2fvI8NsBw0b5WNgxk3rrRtiU3rvlORG1_1U6kj9h50og2SrDorm7pZctvnt9-VDNuhscTNAmnxYTnIECYrfZ9DPpmPoAi6W6dPgTvy-No0xIrMXJSVEPrFLJJMnEebaSGFDB8/s1600/cmos.png)  
 
@@ -57,7 +66,7 @@ Before moving into layout design we have to get some idea about the physical str
 
 ### Design Process 
 
-When we design  a PMOS we have to first add n-well in the default p-type wafer given in magic. Then for source and drain parts we add p-diffusion on n-well and then a polysilicon layer for gate. For the PMOS same process but we place n-diif on the default p-layer. Then add ntap or ptap on substrate for the base and add the li layer and connect with them by ntapc or ptapc respectively. Use PDC or NDC as vias to connect li with diffusion areas. Add metal layers and vias(mcon) to connect li according to requirements. Then label the layers. This is the process very simply. [refer](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html#process-stack-diagram)[]
+When we design  a PMOS we have to first add n-well in the default p-type wafer given in magic. Then for source and drain parts we add p-diffusion on n-well and then a polysilicon layer for gate. For the PMOS same process but we place n-diif on the default p-layer. Then add ntap or ptap on substrate for the base and add the li layer and connect with them by ntapc or ptapc respectively. Use PDC or NDC as vias to connect li with diffusion areas. Add metal layers and vias(mcon) to connect li according to requirements. Then label the layers. This is the process very simply. [refer](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html#process-stack-diagram)
 <img src="https://skywater-pdk.readthedocs.io/en/main/_images/metal_stack.svg" alt="N-Well and P-Diffusion" width="600"/>
 
 
@@ -99,7 +108,7 @@ After drawing the transistors connect them according to schematic using li and m
     ```
  Then as above use paint ptap , paint ntap, paint natpc, paint ptapc,....... as required.  
  
- 7. **Design Rule Check (DRC):**
+ 6. **Design Rule Check (DRC):**
     ```tcl
     drc check
     ```
@@ -111,11 +120,11 @@ After drawing the transistors connect them according to schematic using li and m
 
    
 
-9. **Extract the Layout:**
+7. **Extract the Layout:**
     ```tcl
     extract all
     ```
-10. **Extract the spice file**
+8. **Extract the spice file**
     ```tcl
     ext2spice file_name.ext
     ```
