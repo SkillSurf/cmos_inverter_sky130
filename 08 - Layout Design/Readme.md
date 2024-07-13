@@ -57,48 +57,27 @@ Before moving into layout design we have to get some idea about the physical str
 
 ### Design Process 
 
-When we design  a PMOS we have to first add n-well in the default p-type wafer given in magic. Then for source and drain parts we add p-diffusion on n-well and then polysilicon layer for gate. Then we add li metal layer and other metal layers and vias according to requirements. This is the process very simply. 
-[for more details](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html#process-stack-diagram)
-![](https://skywater-pdk.readthedocs.io/en/main/_images/metal_stack.svg)
+When we design  a PMOS we have to first add n-well in the default p-type wafer given in magic. Then for source and drain parts we add p-diffusion on n-well and then a polysilicon layer for gate. For the PMOS same process but we place n-diif on the default p-layer. Then add ntap or ptap on substrate for the base and add the li layer and connect with them by ntapc or ptapc respectively. Use PDC or NDC as vias to connect li with diffusion areas. Add metal layers and vias(mcon) to connect li according to requirements. Then label the layers. This is the process very simply. [refer](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html#process-stack-diagram)[]
+<img src="https://skywater-pdk.readthedocs.io/en/main/_images/metal_stack.svg" alt="N-Well and P-Diffusion" width="600"/>
 
-
-1. **P-Type Wafer:**
-   - The wafer is p-type by default. For pMOS, use an n-well.
-
-2. **Diffusion Layer:**
-   - N-diffusion is created in the p-well.
-   - P-diffusion is created in the n-well.
-   - Diffusion regions form the sources and drains of the transistors.
-
-3. **Oxide Layer (Polysilicon):**
-   - Add the polysilicon layer above the diffusion layer.
-
-4. **Metal Layers and Interconnects:**
-   - Use LI (local interconnect) metal for diffusion layers.
-   - To connect diffusion layers and LI metal, use vias:
-     - Connect p-diff to LI: `pdc`
-     - Connect n-diff to LI: `ndc`
 
 ### Layout Creation
-select the wanted area using above method and then use terminal for below seteps.
-1. **Draw the NMOS Transistor:**
+select the wanted area using the above method and then use terminal for below seteps.
+1. **Draw the PMOS Transistor:**
    - Paint the n-well:
      ```tcl
      paint nwell
      ```
-   - Draw the n-diffusion:
-     ```tcl
-     paint ndiff
-     ```
-
-2. **Draw the PMOS Transistor:**
-   - Paint the p-well:
-     ```tcl
-     paint pwell
-     ```
    - Draw the p-diffusion:
      ```tcl
      paint pdiff
+     ```
+
+2. **Draw the NMOS Transistor:**
+
+   - Draw the n-diffusion outside the nwell of PMOS:
+     ```tcl
+     paint ndiff
      ```
 
 3. **Add Polysilicon Gate:**
@@ -113,14 +92,13 @@ After drawing the transistors connect them according to schematic using li and m
      paint li
      ```
 
-5. **Add licon, mcon and Vias for Connections use relevant code:**
+5. **Add licon(PDC or NDC) for Connections of li and pdiff or ndiff (use relevant):**
     ```tcl
-    paint licon
-    paint mocn
-    paint via
+    paint PDC
+    paint NDC
     ```
-
-7. **Design Rule Check (DRC):**
+ Then as above use paint ptap , paint ntap, paint natpc, paint ptapc,....... as required.  
+ 7. **Design Rule Check (DRC):**
     ```tcl
     drc check
     ```
