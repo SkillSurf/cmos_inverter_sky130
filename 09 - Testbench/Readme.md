@@ -5,12 +5,17 @@ To generate a SPICE testbench for verifying the behavior of the SPICE netlist ge
 - [Steps to Create a SPICE Testbench](#stepstocreateaspicetestbench)
    - [Create the Testbench File](#createthetestbenchfile)
    - [Include the Netlist](#includethenetlist)
+   - [Explanation of the Testbench Content](#explanationofthetestbenchcontent)
+   - [Running the Simulation](#runningthesimulation)
 - [Example Testbench](#exampletestbench)
 
-## Create the Testbench File
+
+## Steps to Create a SPICE Testbench
+
+### Create the Testbench File
 Create a new file named tb_yourfilename.sp (you can use any text editor for this, such as nano, vim, or gedit). This file should contain your .spice file, .mag file, and .ext files that were created in Magic VLSI.
 
-## Include the Netlist
+### Include the Netlist
 This is the sample testbench.
 
 ```c
