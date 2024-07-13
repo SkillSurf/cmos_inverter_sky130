@@ -13,11 +13,37 @@ Propagation delay (t<sub>pd</sub>) is the time taken for a signal to travel from
 
 <img title="Delay Analysis" width = 500 alt="installed files" src="Images\delay.png">
 
-### Delay Analysis of CMOS inverter under sky130
+## Delay Analysis of CMOS inverter under sky130
 
 #### Load the test bench
 
-Firt load the test bench for the CMOS inverter. [See here](../04%20-%20VTC%20Analysis)
+First load the test bench for the CMOS inverter. [See here](../04%20-%20VTC%20Analysis)
+
+<img title="Test bench for CMOS inverter" width = 500 alt="installed files" src="Images/Screenshot from 2024-07-13 09-57-12.png">
+
+#### Simulate the testbench
+Click on **Net List** then **Simulate** in the right side of the menue bar.
+
+Use Following spice commands (Need to do transient analysis)
+```sh
+    pname=s1 only_toplevel=false value=".lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+    .tran .02n 40n
+    .save all
+    .end" 
+```
+For V<sub>in</sub> use following script
+```sh
+    "PULSE(0 1.8 0 .1n .3n 10n 20.6n 10)"
+```  
+
+After the simulation completed, run the following command to plot $V_{o}$ vs $V_{in}$.
+
+```sh
+    plot vin vout
+```
 
 
-<img title="Test bench for CMOS inverter" width = 500 alt="installed files" src="images\testbench.png">
+
+
+
+
