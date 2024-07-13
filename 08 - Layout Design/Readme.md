@@ -66,7 +66,7 @@ Before moving into layout design we have to get some idea about the physical str
 
 ### Design Process 
 
-When we design  a PMOS we have to first add n-well in the default p-type wafer given in magic. Then for source and drain parts we add p-diffusion on n-well and then a polysilicon layer for gate. For the PMOS same process but we place n-diif on the default p-layer. Then add ntap or ptap on substrate for the base and add the li layer and connect with them by ntapc or ptapc respectively. Use PDC or NDC as vias to connect li with diffusion areas. Add metal layers and vias(mcon) to connect li according to requirements. Then label the layers. This is the process very simply. [refer](https://skywater-pdk.readthedocs.io/en/main/rules/assumptions.html#process-stack-diagram)
+When we design  a PMOS we have to first add n-well in the default p-type wafer given in magic. Then for source and drain parts we add p-diffusion on n-well and then a polysilicon layer for gate. For the NMOS same process but we place n-diif on the default p-layer. Then add ntap or ptap on substrate for the base and add the li layer and connect with them by ntapc or ptapc respectively. Use PDC or NDC as vias to connect li with diffusion areas. Add metal layers and vias(mcon) to connect li according to requirements. Then label the layers. This is the process very simply. [refer](https://www.vlsi4freshers.com/2020/03/cmos-fabrication-process.html)
 <img src="https://skywater-pdk.readthedocs.io/en/main/_images/metal_stack.svg" alt="N-Well and P-Diffusion" width="600"/>
 
 
