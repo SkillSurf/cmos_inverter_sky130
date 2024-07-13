@@ -14,34 +14,50 @@ Create a new file named tb_yourfilename.sp (you can use any text editor for this
 This is the sample testbench.
 
 ```c
-* Testbench for CMOS Inverter
-* Include the netlist
-* Add the libraries
-.include your_circuit.sp
+* Testbench for magic_inv
+* Add libraries
+.include 'magic_inv.spice'
 
-* Instantiate the pdkfile subcircuit
-X1 IN OUT VDD VSS YOURFILE
-
-* Define simulation parameters
-.param VDD = 1.8V
-.param VSS = 0V
-
-* Define power supplies
-VDD VDD 0 DC VDD
-VSS VSS 0 DC VSS
+* Define power supply voltages
+VDD VP 0 1.8V
+VSS VN 0 0V
 
 * Define input signal
-VINPUT IN 0 PULSE(0 VDD 0n 1n 1n 5n 10n)
+Vin A 0 PULSE(0 1.8 0 1n 1n 10n 20n) 
 
-* Run the transient analysis
-.tran 1n 100n
+* Instantiate the magic_inv subcircuit
+X1 A Y VP VN magic_inv
 
-* Output controls
-.print tran V(IN) V(OUT)
+* Define output load (optional)
+RL Y 0 1k
 
-* Probes
-.probe V(N1)
+* Simulation commands
+.tran 1n 200n
+.control
+  run
+  plot v(Y)
+.endc
 
-* End of file
 .end
+
 ```
+
+## Explanation of the Testbench Content
+- *.include 'magic_inv.spice': Includes the SPICE netlist of the inverter.
+- VDD VP 0 1.8V: Defines a DC voltage source for the power supply (1.8V).
+- VSS VN 0 0V: Defines a ground reference.
+- Vin A 0 PULSE(0 1.8 0 1n 1n 10n 20n): Defines a pulse signal for the input, with a rise time and fall time of 1ns, on-time of 10ns, and period of 20ns.
+- X1 A Y VP VN magic_inv: Instantiates the inverter subcircuit.
+- RL Y 0 1k: Adds a resistive load to the output (optional, depending on your circuit).
+- .tran 1n 200n: Specifies a transient analysis with a step of 1ns over 200ns.
+
+## Running the Simulation
+- Save the testbench file as tb_magic_inv.sp.
+- Run the simulation using a SPICE simulator such as Ngspice:
+- Type below in xterm.
+
+```c
+  ngspice tb_yourfilename.sp
+```
+
+
